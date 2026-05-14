@@ -9,14 +9,13 @@ export default function Navbar() {
 
   return (
     <header className="w-full bg-[#F4F2E8]">
-      <nav className="relative mx-auto flex h-24 max-w-7xl items-center justify-between px-6 md:px-12">
-        {/* Desktop navigation */}
-        <div className="hidden md:flex gap-16 text-xs uppercase tracking-wide">
+      <nav className="relative mx-auto flex h-32 max-w-7xl items-center justify-between px-6 md:px-12">
+        <div className="hidden gap-16 text-xs uppercase tracking-wide md:flex">
           <Link href="/" className="transition-colors hover:text-[#D99A2B]">
             Home
           </Link>
 
-          <Link href="/#participate" className="border-b border-[#D99A2B] text-[#D99A2B]">
+          <Link href="/#participate" className="border-b border-[#D99A2B] text-[#D99A2B] transition-colors hover:text-[#D99A2B]">
             Participate
           </Link>
 
@@ -27,11 +26,10 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link href="/" className="absolute left-1/2 -translate-x-1/2">
-          <Image src="/logo/navbarlogo.svg" alt="Outdoor Office logo" width={80} height={80} priority className="w-16 md:w-20" />
+          <Image src="/logo/navbarlogo.svg" alt="Outdoor Office logo" width={300} height={300} priority className="w-80 md:w-100" />
         </Link>
 
-        {/* Desktop right navigation */}
-        <div className="hidden md:flex gap-16 text-xs uppercase tracking-wide">
+        <div className="hidden gap-16 text-xs uppercase tracking-wide md:flex">
           <Link href="/#faq" className="transition-colors hover:text-[#D99A2B]">
             FAQ
           </Link>
@@ -41,7 +39,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile button */}
+        {/* Mobile menu */}
         <button onClick={() => setMenuOpen(!menuOpen)} className="ml-auto flex flex-col gap-1 md:hidden">
           <span className="h-[2px] w-6 bg-black"></span>
           <span className="h-[2px] w-6 bg-black"></span>
@@ -49,7 +47,6 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile menu */}
       {menuOpen && (
         <div className="flex flex-col items-center gap-8 pb-10 text-xs uppercase tracking-wide md:hidden">
           <Link href="/" className="transition-colors hover:text-[#D99A2B]">
