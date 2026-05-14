@@ -1,24 +1,17 @@
 import Navbar from "./components/Navbar";
 import Statement from "./components/Statement";
+import InfoBlock from "./components/Infoblock";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#F4F2E8]">
+    <main className="min-h-screen bg-[#F3F3E7]">
       <Navbar />
 
       <Statement />
 
-      <section className="min-h-screen flex items-center justify-center">
-        <h1 className="text-4xl uppercase">Outdoor Office</h1>
-      </section>
+      <InfoBlock title="What is Outdoor Office" text="Outdoor Office is a community-driven concept blending movement, culture, and connection through curated experiences and creative gatherings." image="/billeder/IMG_1516.JPG" />
 
-      <section id="participate" className="min-h-screen flex items-center justify-center">
-        <h2 className="text-3xl uppercase">Participate</h2>
-      </section>
-
-      <section id="faq" className="min-h-screen flex items-center justify-center">
-        <h2 className="text-3xl uppercase">FAQ</h2>
-      </section>
+      <InfoBlock title="Who is Outdoor Office" text="We are active, creatives, and everyday people building spaces where community, energy, and culture move together, welcoming people from all backgrounds through movement and connection." image="/billeder/IMG_1500.JPG" reverse />
     </main>
   );
 }
