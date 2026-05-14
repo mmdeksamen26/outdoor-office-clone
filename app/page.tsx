@@ -1,9 +1,12 @@
 import Navbar from "./components/Navbar";
+import Statement from "./components/Statement";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#F4F2E8]">
       <Navbar />
+
+      <Statement />
 
       <section className="min-h-screen flex items-center justify-center">
         <h1 className="text-4xl uppercase">Outdoor Office</h1>
