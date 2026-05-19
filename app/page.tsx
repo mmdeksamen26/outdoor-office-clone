@@ -4,6 +4,7 @@ import InfoBlock from "./components/Infoblock";
 import Activities from "./components/Activities";
 import Newsletter from "./components/Newsletter";
 import FAQ from "./components/Faq";
+import Logo from "./components/Logo";
 
 export default function Home() {
   return (
@@ -21,6 +22,8 @@ export default function Home() {
       <Newsletter />
 
       <FAQ />
+
+      <Logo />
     </main>
   );
 }
