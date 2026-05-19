@@ -5,6 +5,7 @@ import Activities from "./components/Activities";
 import Newsletter from "./components/Newsletter";
 import FAQ from "./components/Faq";
 import Logo from "./components/Logo";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -24,6 +25,8 @@ export default function Home() {
       <FAQ />
 
       <Logo />
+
+      <Footer />
     </main>
   );
 }
