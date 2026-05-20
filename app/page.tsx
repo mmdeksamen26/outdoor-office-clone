@@ -6,11 +6,14 @@ import Newsletter from "./components/Newsletter";
 import FAQ from "./components/Faq";
 import Logo from "./components/Logo";
 import Footer from "./components/Footer";
+import Hero from "./components/Hero";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#F3F3E7]">
       <Navbar />
+
+      <Hero />
 
       <Statement />
 
