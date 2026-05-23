@@ -1,9 +1,48 @@
+"use client";
+
+import { motion } from "framer-motion";
+import type { MotionProps } from "framer-motion";
+
+const fadeUp: MotionProps = {
+  initial: {
+    opacity: 0,
+    y: 40,
+  },
+
+  whileInView: {
+    opacity: 1,
+    y: 0,
+  },
+
+  viewport: {
+    once: true,
+    amount: 0.2,
+  },
+
+  transition: {
+    duration: 1,
+    ease: [0.22, 1, 0.36, 1],
+  },
+};
+
 export default function ConceptBeliefs() {
   return (
     <section className="flex flex-col items-center px-6 pb-44 pt-32 text-center">
-      <h2 className="text-[34px] font-semibold">What we believe in</h2>
+      <motion.h2 {...fadeUp} className="text-center text-2xl font-medium uppercase tracking-wide text-black md:text-4xl">
+        What we believe in
+      </motion.h2>
 
-      <div className="mt-16 space-y-12 text-[16px] leading-[1.5]">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{
+          duration: 1,
+          delay: 0.35,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        className="mt-16 space-y-12 text-[16px] leading-[1.5]"
+      >
         <div>
           <p>Training</p>
           <p className="mt-3">Movement, discipline and continuous growth.</p>
@@ -23,9 +62,21 @@ export default function ConceptBeliefs() {
           <p>Music</p>
           <p className="mt-3">Sound that brings people and moments together.</p>
         </div>
-      </div>
+      </motion.div>
 
-      <p className="mt-52 text-[16px]">For the people by the people.</p>
+      <motion.p
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{
+          duration: 1,
+          delay: 0.5,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        className="mt-52 text-[16px]"
+      >
+        For the people by the people.
+      </motion.p>
     </section>
   );
 }
