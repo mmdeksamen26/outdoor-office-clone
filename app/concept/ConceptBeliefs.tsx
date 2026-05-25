@@ -41,7 +41,7 @@ export default function ConceptBeliefs() {
           delay: 0.35,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="mt-16 space-y-12 text-[16px] leading-[1.5]"
+        className="mt-16 space-y-12 text-[18px] font-light leading-[1.5]"
       >
         <div>
           <p>Training</p>
@@ -73,7 +73,7 @@ export default function ConceptBeliefs() {
           delay: 0.5,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="mt-52 text-[16px]"
+        className="mt-52 text-[18px] font-light"
       >
         For the people by the people.
       </motion.p>
