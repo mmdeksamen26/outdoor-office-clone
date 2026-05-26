@@ -9,18 +9,31 @@ type InfoBlockProps = {
 
 export default function InfoBlock({ title, text, image, reverse = false }: InfoBlockProps) {
   return (
-    <section className="grid grid-cols-2 min-h-[50vh]">
-      {/* billede */}
-      <div className={`relative min-h-[50vh] ${reverse ? "order-1" : "order-2"}`}>
-        <Image src={image} alt={title} fill className="object-cover object-[center_40%]" />
+    <section className="grid grid-cols-1 md:grid-cols-2 md:min-h-[600px]">
+      {/* Billede */}
+      <div
+        className={`
+          relative w-full
+          aspect-[4/5] sm:aspect-[3/4] md:aspect-auto md:h-full
+          order-1
+          ${reverse ? "md:order-first" : "md:order-last"}
+        `}
+      >
+        <Image src={image} alt={title} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover object-center" priority={false} />
       </div>
 
-      {/* tekst */}
-      <div className={`flex items-center justify-center bg-[#F3F3E7] p-16 text-black ${reverse ? "order-2" : "order-1"}`}>
-        <div className="max-w-md">
-          <h2 className="text-3xl uppercase mb-6 leading-tight">{title}</h2>
-
-          <p className="text-base leading-relaxed">{text}</p>
+      {/* Tekst */}
+      <div
+        className={`
+          flex items-center justify-center bg-[#F3F3E7] text-black
+          px-6 py-10 sm:px-8 sm:py-12 md:p-16
+          order-2
+          ${reverse ? "md:order-last" : "md:order-first"}
+        `}
+      >
+        <div className="w-full max-w-[28rem]">
+          <h2 className="mb-4 text-2xl sm:text-3xl md:text-3xl uppercase leading-tight">{title}</h2>
+          <p className="text-base leading-relaxed sm:text-[17px]">{text}</p>
         </div>
       </div>
     </section>
