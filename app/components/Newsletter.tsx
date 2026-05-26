@@ -22,18 +22,20 @@ export default function Newsletter() {
           <button
             type="submit"
             className="
-              bg-[#F4F2E8]
-              text-black
-              px-8
-              py-4
-              rounded-full
-              border-2
-              border-black
-              transition-all
-              duration-300
-              hover:bg-[#FEB53C]
-              hover:border-[#FEB53C]
-            "
+    w-fit
+    self-center
+    bg-[#F4F2E8]
+    text-black
+    px-8
+    py-4
+    rounded-full
+    border-2
+    border-black
+    transition-all
+    duration-300
+    hover:bg-[#FEB53C]
+    hover:border-[#FEB53C]
+  "
           >
             Subscribe
           </button>
