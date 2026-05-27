@@ -32,7 +32,7 @@ export default function ConceptStory() {
 
       {/* tekst section */}
       <motion.section {...fadeUp} className="flex items-center justify-center px-8 py-16 text-center md:px-12 md:py-32">
-        <p className="max-w-[850px] text-[16px] font-light leading-[1.6] md:text-[18px] md:leading-[1.5]">As a community that takes pride in staying active and healthy individuals self improvement, we strive to improve both ourselves and the people around us, mentally and physically. Whether it&apos;s sprinting in the coldness of winter, or going the extra mile keeps us on exercise, or gaining a different perspective on accountability and self discipline.</p>
+        <p className="max-w-[850px] text-[16px] font-light leading-[1.6] md:text-[18px] md:leading-[1.5]">As a community that takes pride in staying active, healthy, and committed to self improvement, we strive to better ourselves and the people around us, both mentally and physically. Whether it is sprinting through the cold of winter, pushing ourselves to go the extra mile during training, or developing a stronger sense of accountability and self discipline, we aim to grow together through challenge and consistency.</p>
       </motion.section>
 
       {/* stort billede — kun desktop */}
