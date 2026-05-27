@@ -51,7 +51,7 @@ export default function ContactPage() {
             {sent ? (
               <p className="text-center text-sm uppercase tracking-wide">Message sent ✓</p>
             ) : (
-              <button type="submit" className="ml-auto block border border-black px-8 py-3 text-sm uppercase transition-colors hover:bg-black hover:text-white">
+              <button type="submit" className="ml-auto block border border-black px-8 py-3 text-sm uppercase transition-colors hover:bg-[#FEB53C] hover:text-black">
                 Send
               </button>
             )}
@@ -84,7 +84,7 @@ export default function ContactPage() {
             {collabSent ? (
               <p className="text-center text-sm uppercase tracking-wide">Request sent ✓</p>
             ) : (
-              <button type="submit" className="ml-auto block border border-black px-8 py-3 text-sm uppercase transition-colors hover:bg-black hover:text-white">
+              <button type="submit" className="ml-auto block border border-black px-8 py-3 text-sm uppercase transition-colors hover:bg-[#FEB53C] hover:text-black">
                 Send
               </button>
             )}
