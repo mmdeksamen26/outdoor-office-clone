@@ -12,7 +12,7 @@ const activities = [
     time: "10:00",
     location: "Nørrebro Park",
     description: "Outdoor strength workout focused on community and movement.",
-    image: "/billeder/styrke.jpg",
+    image: "/billeder/styrke.JPG",
   },
   {
     title: "Event",
@@ -21,7 +21,7 @@ const activities = [
     time: "18:30",
     location: "Refshaleøen",
     description: "Social event with music, creative activities and networking.",
-    image: "/billeder/adidassko.jpg",
+    image: "/billeder/adidassko.JPG",
   },
   {
     title: "Social Run",
