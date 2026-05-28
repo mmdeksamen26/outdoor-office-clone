@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 
-const fadeUp = {
+const fadeUp: Variants = {
   initial: {
     opacity: 0,
     y: 40,
@@ -12,22 +13,22 @@ const fadeUp = {
     opacity: 1,
     y: 0,
   },
-
-  viewport: {
-    once: true,
-    amount: 0.2,
-  },
-
-  transition: {
-    duration: 1,
-    ease: [0.22, 1, 0.36, 1],
-  },
 };
 
 export default function ConceptIntro() {
   return (
     <section className="flex min-h-[75vh] md:min-h-[85vh] flex-col items-center justify-center px-6 pb-8 md:pb-32 text-center">
-      <motion.h1 {...fadeUp} className="text-center text-2xl font-medium uppercase tracking-wide text-black md:text-4xl">
+      <motion.h1
+        variants={fadeUp}
+        initial="initial"
+        whileInView="whileInView"
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{
+          duration: 1,
+          ease: "easeOut",
+        }}
+        className="text-center text-2xl font-medium uppercase tracking-wide text-black md:text-4xl"
+      >
         Where it all started
       </motion.h1>
 
@@ -38,7 +39,7 @@ export default function ConceptIntro() {
         transition={{
           duration: 1,
           delay: 0.15,
-          ease: [0.22, 1, 0.36, 1],
+          ease: "easeOut",
         }}
         className="mt-40 text-[18px]"
       >
