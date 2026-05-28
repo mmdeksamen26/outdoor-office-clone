@@ -44,16 +44,19 @@ export default function Activities() {
       <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-3">
         {activities.map((activity) => (
           <article key={activity.title} className="flex h-full flex-col overflow-hidden bg-[#FAF9F0]">
+            {/* IMAGE */}
             <div className="relative h-[360px] w-full">
               <Image src={activity.image} alt={activity.title} fill className="object-cover" />
             </div>
 
-            <div className="flex h-full min-h-[330px] flex-col p-8">
+            {/* CONTENT */}
+            <div className="flex min-h-[330px] flex-col p-8">
               <h3 className="mb-5 text-xl font-medium uppercase">{activity.title}</h3>
 
               <p className="mb-6 text-sm leading-6 text-black/70">{activity.description}</p>
 
-              <div className="flex-1">
+              {/* INFO */}
+              <div className="mb-8">
                 <p className="text-base leading-7">
                   {activity.level && (
                     <>
@@ -69,9 +72,10 @@ export default function Activities() {
                 </p>
               </div>
 
+              {/* MODAL */}
               <Dialog.Root onOpenChange={() => setSubmitted(false)}>
                 <Dialog.Trigger asChild>
-                  <button className="mt-auto w-fit pt-8 text-xl font-medium uppercase underline underline-offset-4 transition-colors hover:text-[#D99A2B]">Sign up</button>
+                  <button className="w-fit text-xl font-medium uppercase underline underline-offset-4 transition-colors hover:text-[#D99A2B]">Sign up</button>
                 </Dialog.Trigger>
 
                 <Dialog.Portal>

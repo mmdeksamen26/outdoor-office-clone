@@ -111,12 +111,26 @@ export default function Navbar() {
       </nav>
 
       {menuOpen && (
-        <div className="bg-[#F4F2E8] flex flex-col items-center gap-8 pb-10 text-xs uppercase md:hidden">
-          <Link href="/">Home</Link>
-          <Link href="/#participate">Participate</Link>
-          <Link href="/concept">Concept</Link>
-          <Link href="/#faq">FAQ</Link>
-          <Link href="/contact">Contact</Link>
+        <div className="flex flex-col items-center gap-8 bg-[#F4F2E8] pb-10 text-xs uppercase tracking-wide md:hidden">
+          <Link href="/" className={pathname === "/" ? "border-b border-[#D99A2B] text-[#D99A2B]" : "text-black transition-colors hover:text-[#D99A2B]"}>
+            Home
+          </Link>
+
+          <Link href="/#participate" className={activeSection === "participate" ? "border-b border-[#D99A2B] text-[#D99A2B]" : "text-black transition-colors hover:text-[#D99A2B]"}>
+            Participate
+          </Link>
+
+          <Link href="/concept" className={pathname === "/concept" ? "border-b border-[#D99A2B] text-[#D99A2B]" : "text-black transition-colors hover:text-[#D99A2B]"}>
+            Concept
+          </Link>
+
+          <Link href="/#faq" className={activeSection === "faq" ? "border-b border-[#D99A2B] text-[#D99A2B]" : "text-black transition-colors hover:text-[#D99A2B]"}>
+            FAQ
+          </Link>
+
+          <Link href="/contact" className={pathname === "/contact" ? "border-b border-[#D99A2B] text-[#D99A2B]" : "text-black transition-colors hover:text-[#D99A2B]"}>
+            Contact
+          </Link>
         </div>
       )}
     </header>
