@@ -6,7 +6,7 @@ export default function FAQ() {
       <div className="mx-auto grid max-w-5xl overflow-hidden bg-[#F4F2E8] md:grid-cols-2">
         {/* Image */}
         <div className="relative h-[520px] md:h-auto">
-          <Image src="/billeder/faq.jpg" alt="Outdoor Office FAQ" fill className="object-cover object-center" />
+          <Image src="/billeder/faq.JPG" alt="Outdoor Office FAQ" fill className="object-cover object-center" />
         </div>
 
         {/* Content */}
