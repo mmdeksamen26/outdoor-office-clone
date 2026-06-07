@@ -75,19 +75,19 @@ export default function Activities() {
               {/* MODAL */}
               <Dialog.Root onOpenChange={() => setSubmitted(false)}>
                 <Dialog.Trigger asChild>
-                  <button className="w-fit text-xl font-medium uppercase underline underline-offset-4 transition-colors hover:text-[#D99A2B]">Sign up</button>
+                  <button className="w-fit cursor-pointer text-xl font-medium uppercase underline underline-offset-4 transition-colors hover:text-[#D99A2B]">Sign up</button>
                 </Dialog.Trigger>
 
                 <Dialog.Portal>
                   <Dialog.Overlay className="fixed inset-0 z-40 bg-black/50" />
 
                   <Dialog.Content className="fixed left-1/2 top-1/2 z-50 w-[90%] max-w-4xl -translate-x-1/2 -translate-y-1/2 bg-[#F4F2E8] px-8 py-14 shadow-xl md:px-20">
-                    <Dialog.Close className="absolute right-6 top-5 text-2xl">×</Dialog.Close>
+                    <Dialog.Close className="absolute right-6 top-5 cursor-pointer text-2xl">×</Dialog.Close>
 
                     <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
                       <Image src="/logo/navbarlogo.svg" alt="Outdoor Office logo" width={300} height={300} className="mb-8 w-52 md:w-64" />
 
-                      <Dialog.Title className="mb-3 text-3xl font-medium">{submitted ? "You’re signed up" : "We can’t wait to meet you"}</Dialog.Title>
+                      <Dialog.Title className="mb-3 text-3xl font-medium">{submitted ? "You're signed up" : "We can't wait to meet you"}</Dialog.Title>
 
                       <p className="mb-10 text-sm uppercase tracking-wide text-black/60">
                         {activity.title} · {activity.date} · {activity.time}
@@ -111,7 +111,7 @@ export default function Activities() {
                             <input type="email" placeholder="Email" required className="w-full bg-white px-6 py-4 text-sm outline-none" />
                           </div>
 
-                          <button type="submit" className="mb-10 w-full max-w-xs bg-black px-10 py-4 text-lg text-white transition-opacity hover:opacity-80">
+                          <button type="submit" className="mb-10 w-full max-w-xs cursor-pointer bg-black px-10 py-4 text-lg text-white transition-opacity hover:opacity-80">
                             Sign up
                           </button>
 

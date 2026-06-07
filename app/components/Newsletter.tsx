@@ -36,6 +36,7 @@ export default function Newsletter() {
                 border-2 border-black
                 transition-all duration-300
                 hover:bg-[#FEB53C] hover:border-[#FEB53C]
+                cursor-pointer
               "
             >
               Subscribe
@@ -45,7 +46,7 @@ export default function Newsletter() {
           <Dialog.Portal>
             <Dialog.Overlay className="fixed inset-0 z-40 bg-black/50" />
             <Dialog.Content className="fixed left-1/2 top-1/2 z-50 w-[90%] max-w-4xl -translate-x-1/2 -translate-y-1/2 bg-[#F4F2E8] px-8 py-14 shadow-xl md:px-20">
-              <Dialog.Close className="absolute right-6 top-5 text-2xl">×</Dialog.Close>
+              <Dialog.Close className="absolute right-6 top-5 text-2xl cursor-pointer">×</Dialog.Close>
               <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
                 <Image src="/logo/navbarlogo.svg" alt="Outdoor Office logo" width={300} height={300} className="mb-8 w-52 md:w-64" />
                 <Dialog.Title className="mb-3 text-3xl font-medium">The good folks thank you for staying updated with us</Dialog.Title>
